@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+html
+    head
+        link( rel="icon" href="images/logo/logo.png")
+        meta(name="viewport", content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
+        meta(charset="UTF-8")
+        title FormulaOne-Materialize
+        link( href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+        link( type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection")
+        link(href="css/styles.css", rel="stylesheet")
+        link(href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet")
+        
+    body
+
+        header
+            ul#dropdown1.dropdown-content.blue-grey.darken-1
+                li
+                    a(href="#historiaSection" class="white-text") Historia
+                li
+                    a(href="#" class="white-text") Records
+                li
+                    a(href="#" class="white-text") Galeria
+            
+            nav.navegacion.white
+                .nav-wrapper
+                    a(href="#!" class="brand-logo")
+                         img(src="images/logo.png", alt="")
+                    a(href="#" data-activates="mobile-demo" class="button-collapse btn-menu")
+                        i.material-icons menu
+                    ul.right.hide-on-med-and-down.menu
+                        li
+                            a(href="#circuitosSection" class="black-text menuA") Circuitos
+                        li
+                            a(href="#escuderiasSection" class="black-text menuA") Escuderias
+                        li
+                            a(href="#pilotosSection" class="black-text menuA") Pilotos
+                        li
+                            a(href="#" class="dropdown-button black-text menuA" data-activates="dropdown1") 
+                                span Más
+                                i.material-icons.right arrow_drop_down
+                    ul#mobile-demo.side-nav
+                        h3.black-text FormulaOne
+                        li
+                            a(href="#circuitosSection" class="black-text menuA") Circuitos
+                        li
+                            a(href="#escuderiasSection" class="black-text menuA") Escuderias
+                        li
+                            a(href="#pilotosSection" class="black-text menuA") Pilotos
+                        li
+                            a(href="#historiaSection" class="black-text") Historia
+                        li
+                            a(href="#" class="black-text") Records
+                        li
+                            a(href="#" class="black-text") Galeria
+                            
+                                 
+        
+        .row
+
+        .parallax-container
+            .parallax
+                img(src="images/img3.jpg", alt="")
+
+        .container.row
+            .info.black-text
+                h1 Fórmula Uno
+                h3 La categoria reina del deporte motor
+                p.
+                     La Fórmula 1, abreviada como F1 y también denominada la «categoría reina del automovilismo»​ o «la máxima categoría del automovilismo», es la competición de automovilismo internacional más popular y prestigiosa, superando a categorías de automovilismo como la NASCAR, el Rally,   los automóviles de turismo, entre otras.​ A cada carrera se le denomina Gran Premio y el torneo que las agrupa se denomina Campeonato Mundial de Fórmula 1. La entidad que la dirige es la Federación Internacional del Automóvil (FIA). El Formula One Group es controlado por la           empresa estadounidense Liberty Media desde septiembre de 2016.​
+                p.
+                    Los automóviles utilizados son monoplazas con la última tecnología disponible, siempre limitadas por un reglamento técnico; algunas mejoras que fueron desarrolladas en la Fórmula 1 terminaron siendo utilizadas en automóviles comerciales, como el freno de disco.​ La mayoría de los circuitos de carreras donde se celebran los Grandes Premios son autódromos, aunque también se utilizan circuitos callejeros y anteriormente se utilizaron circuitos ruteros.
+
+                img(src="images/pits.jpg", alt="" class="imgIntro materialboxed" data-caption="Parada de pits de un piloto de la famosa escuderia Ferrari")
+                p.
+
+                    El inicio de la Fórmula 1 moderna se remonta al año 1950, en el que participaron escuderías como Ferrari, Alfa Romeo y Maserati. Algunas fueron reemplazadas por otras nuevas como McLaren, Williams, Lotus y Renault, que se han alzado varias veces con el Campeonato Mundial de Constructores. Las escuderías tienen que planear sus fichajes y renovación de contratos 2 o 3 carreras antes del fin de la temporada. Por su parte, los pilotos deben contar con la superlicencia de la FIA para competir, que se obtiene sobre la base de resultados en otros campeonatos.
+        .parallax-container
+            .parallax
+                img(src="images/img1.jpg", alt="")
+
+        .circuitos
+            a(name="circuitosSection" class="black-text circuitos__titulo") 
+                h1 Circuitos
+            h4.circuitos__info.black-text Circuitos de la temporada 2017
+
+            .circuitos__sedes
+                
+                include circuitos.pug
+        
+        .escuderias
+            a(name="escuderiasSection" class="black-text escuderias__titulo") 
+                h1 Escuderias
+            h4.escuderias__info.black-text Escuderias que compiten en la temporada 2017        
+
+            .escuderias__equipos
+
+                include escuderias.pug
+
+        .pilotos
+            a(name="pilotosSection" class="black-text pilotos__titulo") 
+                h1 Pilotos
+            h4.escuderias__info.black-text Pilotos que compiten en la temporada 2017  
+
+            .pilotos__pilotosPrincipales
+                include pilotos.pug
+        
+        .row.historia
+            a(name="historiaSection" class="black-text historia__titulo") 
+                h1 Historia
+
+            .col.s12.m5
+                img(src="images/historia/historia1.jpg", alt="")
+            .col.s12.m7
+                h3 Antecedentes a la Formula 1
+                p.
+                    Las carreras de Gran Premio (en francés Grand Prix) tienen raíces en las carreras de automóviles organizadas en Francia desde 1894. Rápidamente evolucionaron de simples carreras en caminos de un pueblo a otro, a pruebas de resistencia para los autos y los pilotos. La innovación pronto rebasó los 160kph pero al ser carreras en caminos abiertos eran frecuentes los accidentes que resultaban en defunciones tanto de pilotos como de espectadores.
+                p.
+                    En 1900 ocurrió un evento que resultó trascendental en las carreras, cuando James Gordon Bennett, Jr., propietario de los periódicos New York Herald y International Herald Tribune en París, estableció la Copa Gordon Bennett de Carreras de Autos en Europa, una carrera anual que atrajo competidores internacionales. Cada país podía inscribir hasta tres autos.
+        
+       
+        script(src="js/jquery.min.js")
+        script(script type="text/javascript" src="js/materialize.min.js")
+        script(src="js/main.js")
+    
